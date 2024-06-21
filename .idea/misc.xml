@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/spring-ioc-java-06/pom.xml" />
         <option value="$PROJECT_DIR$/spring-ioc-xml-03/pom.xml" />
       </set>
     </option>
