@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDao" class="com.yannick.ioc_02.UserDao"/>
+    <bean id="userService" class="com.yannick.ioc_02.UserService">
+        <constructor-arg ref="userDao"/>
+    </bean>
+
+    <bean id="userService2" class="com.yannick.ioc_02.UserService">
+        <constructor-arg value="18"/>
+        <constructor-arg value="yannick"/>
+        <constructor-arg ref="userDao"/>
+    </bean>
+
+    <bean id="userService3" class="com.yannick.ioc_02.UserService">
+        <constructor-arg name="name" value="yannick"/>
+        <constructor-arg name="age" value="21"/>
+        <constructor-arg name="userDao" ref="userDao"/>
+    </bean>
+
+
+</beans>

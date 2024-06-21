@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="happyComponent" class="com.yannick.ioc_01.HappyComponent" />
+    <bean id="happyComponent21" class="com.yannick.ioc_01.HappyComponent" />
+
+    <bean id="clienService" class="com.yannick.ioc_01.ClientService" factory-method="createInstance"/>
+
+    <bean id="defaultLocation" class="com.yannick.ioc_01.DefaultServiceLocation"/>
+    <bean id="clientService2" factory-bean="defaultLocation" factory-method="createClientServiceInstance"/>
+
+</beans>
