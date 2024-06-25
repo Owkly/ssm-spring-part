@@ -1,7 +1,8 @@
 package generator.com.yannick.pojo;
 
-import java.io.Serializable;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @TableName user
