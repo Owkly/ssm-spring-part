@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.yannick.mapper.EmployeeMapper">
+    <select id="selectByPrimaryKey" resultType="com.yannick.pojo.Employee">
+--         select emp_id empId, emp_name empName, emp_salary empSalary from
+        select * from
+        t_emp where emp_id = #{id}
+    </select>
+
+
+    <delete id="deleteByPrimaryKey">
+        delete from t_emp where emp_id = #{id}
+    </delete>
+
+<!--    <select id="selectEmpNameAndMaxSalary" resultType="map">-->
+<!--        SELECT-->
+<!--            emp_name AS '员工姓名',-->
+<!--                emp_salary AS '员工工资',-->
+<!--                (SELECT AVG(emp_salary) FROM t_emp) AS '部门平均工资'-->
+<!--        FROM t_emp-->
+<!--        WHERE emp_salary = (-->
+<!--            SELECT MAX(emp_salary) FROM t_emp-->
+<!--        )-->
+<!--    </select>-->
+
+</mapper>
