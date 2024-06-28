@@ -20,6 +20,8 @@
         <module>spring-aop-annotation-08</module>
         <module>spring-aop-annotation-09</module>
         <module>ssm-mybatis/mybatis-02</module>
+        <module>ssm-mvc</module>
+        <module>ssm-mvc/mvc-01</module>
     </modules>
 
 
@@ -162,12 +164,25 @@
             <artifactId>mybatis</artifactId>
             <version>3.5.7</version>
         </dependency>
+
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>2.0.6</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>9.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
     </dependencies>
 
